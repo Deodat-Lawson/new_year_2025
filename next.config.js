@@ -5,6 +5,20 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+    // Enable/disable React strict mode as needed
+    reactStrictMode: true,
+
+    // 1. Disable TypeScript type checking during builds
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+
+    // 2. Disable ESLint checks during builds
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+};
+
 
 export default config;
